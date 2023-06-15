@@ -20,7 +20,6 @@ body {
 .button {
   background: linear-gradient(95.61deg, #da8023 0%, #e2b438 100%);
   border-radius: 8px;
-  padding: 20px 63px;
   border: 0;
   cursor: pointer;
   outline: none;
@@ -34,12 +33,32 @@ button:hover {
   background: linear-gradient(95.61deg, #ac6115 0%, #9e7a19 100%);
 }
 
+.common-title {
+  font-family: "Merriweather", sans-serif;
+  font-size: 64px;
+  line-height: 80px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.common-item-title {
+  font-size: 24px;
+  line-height: 29px;
+  padding: 24px 0;
+}
+
+.common-item-text {
+  font-size: 16px;
+  line-height: 22px;
+}
+
 .main {
   overflow: hidden;
   background-image: url("../images/main-bg.png");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .header {
@@ -89,7 +108,8 @@ button:hover {
   padding: 103px 0 199px;
 }
 
-.main-content .container {
+.main-content .container,
+.order .container {
   position: relative;
 }
 
@@ -120,8 +140,152 @@ button:hover {
   margin-bottom: 56px;
 }
 
+.button.main-button {
+  padding: 20px 63px;
+}
+
 .main-image {
   position: absolute;
   top: -123px;
   left: calc(100% - 991px);
+}
+
+.why {
+  background-image: url("../images/why-bg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: 180px;
+}
+
+.why-items {
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(3, 312px);
+  justify-content: center;
+}
+
+.why-item {
+  text-align: center;
+}
+
+.products {
+  background-image: url("../images/burgers-bg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: 180px;
+  background-size: 1400px;
+}
+
+.products-items {
+  display: grid;
+  grid-template-columns: repeat(3, 384px);
+  gap: 24px;
+}
+
+.products-item {
+  padding: 30px;
+  background: #211a16;
+  border: 1px solid #353535;
+  border-radius: 16px;
+}
+
+.products-item-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.products-item-price {
+  font-size: 32px;
+  line-height: 39px;
+  margin-bottom: 8px;
+}
+
+.products-item-weight {
+  font-size: 16px;
+  line-height: 19px;
+  color: #757575;
+}
+
+.button.product-button {
+  padding: 19px 35px;
+  display: flex;
+  align-items: center;
+}
+
+.button.product-button span {
+  margin-right: 10px;
+}
+
+.order {
+  background-image: url("../images/order-bg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: 180px;
+  overflow: hidden;
+}
+
+.order-image {
+  position: absolute;
+  top: 0;
+  right: calc(100% - 764px);
+  z-index: -1;
+}
+
+.order-form {
+  background: #211a16;
+  border: 1px solid #353535;
+  border-radius: 16px;
+  max-width: 424px;
+  padding: 36px 40px 60px;
+  margin-left: 674px;
+  text-align: center;
+}
+
+.order-form-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.order-form-input {
+  background: linear-gradient(95.61deg, #da8023 0%, #e2b438 100%);
+  width: 344px;
+  height: 62px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-form-input input {
+  padding: 20px 10px;
+  background: #211a16;
+  border-radius: 8px;
+  width: 342px;
+  height: 60px;
+  outline: none;
+  border: 1px solid transparent;
+  color: #ffffff;
+}
+
+.order-form-inputs button {
+  padding: 20px;
+}
+
+.footer {
+  padding: 60px 0;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rights {
+  font-size: 16px;
+  line-height: 20px;
 }
