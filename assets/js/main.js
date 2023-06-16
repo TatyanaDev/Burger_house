@@ -46,15 +46,29 @@ orderAction.addEventListener('click', () => {
 
 currency.addEventListener('click', event => {
   const currentCurrency = event.target.innerText
-  let newCurrency = '$'
-  let coefficient = 1
+  let newCurrency
+  let coefficient
 
-  if (currentCurrency === '$') {
-    newCurrency = '₴'
-    coefficient = 36.9
-  } else if (currentCurrency === '₴') {
-    newCurrency = 'zł'
-    coefficient = 4.08
+  switch (currentCurrency) {
+    case '$':
+      newCurrency = '₴'
+      coefficient = 36.9
+      break
+    case '₴':
+      newCurrency = 'zł'
+      coefficient = 4.08
+      break
+    case 'zł':
+      newCurrency = '¥'
+      coefficient = 7.13
+      break
+    case '¥':
+      newCurrency = '€'
+      coefficient = 0.91
+      break
+    default:
+      newCurrency = '$'
+      coefficient = 1
   }
 
   event.target.innerText = newCurrency
